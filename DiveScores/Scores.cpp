@@ -12,6 +12,8 @@
 #define JUDGES 7
 
 
+double getNum();
+
 double getNum()
 {
 	float entry = 0.0;
@@ -27,6 +29,7 @@ double getNum()
 
 
 
+double judgeScores(double scores[]);
 
 double judgeScores(double scores[])
 {
@@ -41,6 +44,8 @@ double judgeScores(double scores[])
 
 
 
+
+double difficultyScore(double score);
 
 double difficultyScore(double score)
 {
@@ -57,6 +62,10 @@ double difficultyScore(double score)
 
 
 
+
+
+double scoreValidity(double score);
+
 double scoreValidity(double score)
 {
 	if ((score > 10) || (score < 1))
@@ -72,6 +81,8 @@ double scoreValidity(double score)
 
 
 
+
+void highestLowestScore(double scores[], double highestScore, double lowestScore);
 
 void highestLowestScore(double scores[], double highestScore, double lowestScore)
 {
@@ -91,6 +102,10 @@ void highestLowestScore(double scores[], double highestScore, double lowestScore
 }
 
 
+
+
+
+double scoreTotal(double score[]);
 
 double scoreTotal(double score[])
 {
