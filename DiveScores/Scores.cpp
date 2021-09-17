@@ -73,9 +73,33 @@ double scoreValidity(double score)
 
 
 
+void highestLowestScore(double scores[], double highestScore, double lowestScore)
+{
+	highestScore = scores[0];
+	lowestScore = scores[0];
+	for (int i = 0; i < JUDGES; i++)
+	{
+		if (scores[i] > highestScore)
+		{
+			highestScore = scores[i];
+		}
+		else if (scores[i] < lowestScore)
+		{
+			lowestScore = scores[i];
+		}
+	}
+}
 
 
 
+double scoreTotal(double score[])
+{
+	double total = 0.0;
+	for (int i = 0; i < JUDGES; i++)
+	{
+		total += score[i];
+	}
+}
 
 int main(void)
 {
