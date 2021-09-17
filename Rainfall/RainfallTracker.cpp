@@ -83,7 +83,7 @@ void monthOutput(int month)
 
 
 
-double rainfallActual(double actualRainfall[], int month[MONTHS_IN_A_YEAR])
+double rainfallActual(double actualRainfall[], int month[MONTHS_IN_A_YEAR], int prevMonth)
 {
 	for (int i = 0; i < MONTHS_IN_A_YEAR; i++)
 	{

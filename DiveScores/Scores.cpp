@@ -24,12 +24,12 @@ double getNum()
 	return entry;
 }
 
+
+
+
+
 double judgeScores(double scores[])
 {
-	/*double entry = 0.0;
-	char buffer[32] = { 0 };
-	printf("Enter a score");*/
-
 	for (int i = 0; i < JUDGES; i++)
 	{
 		printf("Enter the score from judge %d", i);
@@ -37,6 +37,45 @@ double judgeScores(double scores[])
 	}
 	return 1.0;
 }
+
+
+
+
+
+double difficultyScore(double score)
+{
+	if ((score > 3.8) || (score < 1.2))
+	{
+		printf("The difficulty is not a valid score");
+	}
+	else
+	{
+		return score;
+	}
+
+}
+
+
+
+double scoreValidity(double score)
+{
+	if ((score > 10) || (score < 1))
+	{
+		printf("The score is not valid, enter a valid score.\n");
+	}
+	else
+	{
+		return score;
+	}
+}
+
+
+
+
+
+
+
+
 
 int main(void)
 {
