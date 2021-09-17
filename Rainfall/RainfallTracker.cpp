@@ -26,8 +26,6 @@ int main()
 		cin >> averageRainfall[i];
 	}
 
-
-
 	return 0;
 }
 
@@ -35,6 +33,7 @@ int main()
 
 
 
+void monthOutput(int month);
 
 void monthOutput(int month)
 {
@@ -82,6 +81,7 @@ void monthOutput(int month)
 
 
 
+double rainfallActual(double actualRainfall[], int month[MONTHS_IN_A_YEAR], int prevMonth);
 
 double rainfallActual(double actualRainfall[], int month[MONTHS_IN_A_YEAR], int prevMonth)
 {
@@ -96,6 +96,8 @@ double rainfallActual(double actualRainfall[], int month[MONTHS_IN_A_YEAR], int 
 
 
 
+
+double averageMonthlyRainfall(double averageRainfall[], int month[MONTHS_IN_A_YEAR]);
 
 double averageMonthlyRainfall(double averageRainfall[], int month[MONTHS_IN_A_YEAR])
 {
