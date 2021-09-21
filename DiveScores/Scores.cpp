@@ -105,6 +105,20 @@ void highestLowestScore(double scores[], double highestScore, double lowestScore
 
 
 
+void removeScore(double score[], double scoreRemove)
+{
+	for (int i = 0; i < JUDGES; i++)
+	{
+		if (score[i] == scoreRemove)
+		{
+
+		}
+	}
+}
+
+
+
+
 double scoreTotal(double score[]);
 
 double scoreTotal(double score[])
@@ -114,9 +128,13 @@ double scoreTotal(double score[])
 	{
 		total += score[i];
 	}
+	double difficultScore = difficultyScore(getNum());
+	total *= difficultScore * 0.6;
+	return total;
 }
 
 int main(void)
 {
+
 	return 0;
 }
