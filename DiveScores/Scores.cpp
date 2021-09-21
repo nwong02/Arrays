@@ -29,9 +29,9 @@ double getNum()
 
 
 
-double judgeScores(double scores[]);
+double judgeScores(int scores[]);
 
-double judgeScores(double scores[])
+double judgeScores(int scores[])
 {
 	for (int i = 0; i < JUDGES; i++)
 	{
@@ -135,6 +135,6 @@ double scoreTotal(double score[])
 
 int main(void)
 {
-
+	double diverScore = judgeScores();
 	return 0;
 }
