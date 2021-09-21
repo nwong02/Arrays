@@ -135,6 +135,6 @@ double scoreTotal(double score[])
 
 int main(void)
 {
-	double diverScore = judgeScores();
+
 	return 0;
 }
