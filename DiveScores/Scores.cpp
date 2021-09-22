@@ -1,5 +1,5 @@
-#include <stdlib.h>
-#include <stdio.h>
+
+#include <iostream>
 
 
 /*
@@ -10,6 +10,8 @@
 */
 
 #define JUDGES 7
+
+using namespace std;
 
 
 double getNum();
@@ -29,112 +31,117 @@ double getNum()
 
 
 
-double judgeScores(int scores[]);
+/*
+* Function		: judgesScores()
+* Parameters	: double scores[], int numberOfJudges present
+* Returns		: 0
+* Description	: Takes an array and inputs judges' scores
+*/
 
-double judgeScores(int scores[])
+double judgesScores(double scores[], int numberOfJudges);
+
+double judgesScores(double scores[], int numberOfJudges)
 {
-	for (int i = 0; i < JUDGES; i++)
+	for (int i = 0; i < numberOfJudges; i++)
 	{
-		printf("Enter the score from judge %d", i);
-		scores[i] = getNum();
+		cout << "Enter judge " << i + 1 << "'s score: ";
+		cin >> scores[i];
 	}
-	return 1.0;
+	return 0.0;
 }
 
 
-
-
-
-double difficultyScore(double score);
-
-double difficultyScore(double score)
-{
-	if ((score > 3.8) || (score < 1.2))
-	{
-		printf("The difficulty is not a valid score");
-	}
-	else
-	{
-		return score;
-	}
-
-}
-
-
-
-
-
-double scoreValidity(double score);
-
-double scoreValidity(double score)
-{
-	if ((score > 10) || (score < 1))
-	{
-		printf("The score is not valid, enter a valid score.\n");
-	}
-	else
-	{
-		return score;
-	}
-}
-
-
-
-
-
-void highestLowestScore(double scores[], double highestScore, double lowestScore);
-
-void highestLowestScore(double scores[], double highestScore, double lowestScore)
-{
-	highestScore = scores[0];
-	lowestScore = scores[0];
-	for (int i = 0; i < JUDGES; i++)
-	{
-		if (scores[i] > highestScore)
-		{
-			highestScore = scores[i];
-		}
-		else if (scores[i] < lowestScore)
-		{
-			lowestScore = scores[i];
-		}
-	}
-}
-
-
-
-
-
-void removeScore(double score[], double scoreRemove)
-{
-	for (int i = 0; i < JUDGES; i++)
-	{
-		if (score[i] == scoreRemove)
-		{
-
-		}
-	}
-}
-
-
-
-
-double scoreTotal(double score[]);
-
-double scoreTotal(double score[])
-{
-	double total = 0.0;
-	for (int i = 0; i < JUDGES; i++)
-	{
-		total += score[i];
-	}
-	double difficultScore = difficultyScore(getNum());
-	total *= difficultScore * 0.6;
-	return total;
-}
-
+//double difficultyScore(double score);
+//
+//double difficultyScore(double score)
+//{
+//	if ((score > 3.8) || (score < 1.2))
+//	{
+//		printf("The difficulty is not a valid score");
+//	}
+//	else
+//	{
+//		return score;
+//	}
+//
+//}
+//
+//
+//
+//
+//
+//double scoreValidity(double score);
+//
+//double scoreValidity(double score)
+//{
+//	if ((score > 10) || (score < 1))
+//	{
+//		printf("The score is not valid, enter a valid score.\n");
+//	}
+//	else
+//	{
+//		return score;
+//	}
+//}
+//
+//
+//
+//
+//
+//void highestLowestScore(double scores[], double highestScore, double lowestScore);
+//
+//void highestLowestScore(double scores[], double highestScore, double lowestScore)
+//{
+//	highestScore = scores[0];
+//	lowestScore = scores[0];
+//	for (int i = 0; i < JUDGES; i++)
+//	{
+//		if (scores[i] > highestScore)
+//		{
+//			highestScore = scores[i];
+//		}
+//		else if (scores[i] < lowestScore)
+//		{
+//			lowestScore = scores[i];
+//		}
+//	}
+//}
+//
+//
+//
+//
+//
+//void removeScore(double score[], double scoreRemove)
+//{
+//	for (int i = 0; i < JUDGES; i++)
+//	{
+//		if (score[i] == scoreRemove)
+//		{
+//
+//		}
+//	}
+//}
+//
+//
+//
+//
+//double scoreTotal(double score[]);
+//
+//double scoreTotal(double score[])
+//{
+//	double total = 0.0;
+//	for (int i = 0; i < JUDGES; i++)
+//	{
+//		total += score[i];
+//	}
+//	double difficultScore = difficultyScore(getNum());
+//	total *= difficultScore * 0.6;
+//	return total;
+//}
+//
 int main(void)
 {
-
+	double a[5];
+	judgesScores(a, 5);
 	return 0;
 }
