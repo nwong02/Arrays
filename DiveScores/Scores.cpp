@@ -51,20 +51,32 @@ double judgesScores(double scores[], int numberOfJudges)
 }
 
 
-//double difficultyScore(double score);
-//
-//double difficultyScore(double score)
-//{
-//	if ((score > 3.8) || (score < 1.2))
-//	{
-//		printf("The difficulty is not a valid score");
-//	}
-//	else
-//	{
-//		return score;
-//	}
-//
-//}
+
+/*
+* Function		: difficultyScore()
+* Parameters	: None
+* Returns		: difficult score
+* Description	: Takes an array and inputs judges' scores
+*/
+
+double difficultyScore();
+
+double difficultyScore()
+{
+	double score = 0.0;
+	cout << "Enter the dive difficult score: ";
+	cin >> score;
+
+	if ((score > 3.8) || (score < 1.2))
+	{
+		cout << "That difficult score is not valid, re-enter a valid score: ";
+	}
+	else
+	{
+		return score;
+	}
+
+}
 //
 //
 //
@@ -141,7 +153,8 @@ double judgesScores(double scores[], int numberOfJudges)
 //
 int main(void)
 {
-	double a[5];
+	double a[5] = { 0 };
 	judgesScores(a, 5);
+	difficultyScore();
 	return 0;
 }
