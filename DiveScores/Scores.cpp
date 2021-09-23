@@ -120,7 +120,6 @@ void highestLowestScore(double scores[])
 			lowestScore = scores[i];
 		}
 	}
-	return;
 }
 //
 //
