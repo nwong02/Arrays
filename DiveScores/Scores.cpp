@@ -71,53 +71,57 @@ double difficultyScore()
 	{
 		cout << "That difficult score is not valid, re-enter a valid score: ";
 	}
+	return 1.0;
+
+}
+
+
+
+/*
+* Function		: scoreValidity()
+* Parameters	: None
+* Returns		: difficult score
+* Description	: Takes an array and inputs judges' scores
+*/
+
+double scoreValidity(double score);
+
+double scoreValidity(double score)
+{
+	if ((score > 10) || (score < 1))
+	{
+		cout << "The score is not valid, enter a valid score.\n";
+	}
 	else
 	{
-		return score;
+		cout << "Score ok";
 	}
-
+	return score;
 }
 //
 //
 //
 //
 //
-//double scoreValidity(double score);
-//
-//double scoreValidity(double score)
-//{
-//	if ((score > 10) || (score < 1))
-//	{
-//		printf("The score is not valid, enter a valid score.\n");
-//	}
-//	else
-//	{
-//		return score;
-//	}
-//}
-//
-//
-//
-//
-//
-//void highestLowestScore(double scores[], double highestScore, double lowestScore);
-//
-//void highestLowestScore(double scores[], double highestScore, double lowestScore)
-//{
-//	highestScore = scores[0];
-//	lowestScore = scores[0];
-//	for (int i = 0; i < JUDGES; i++)
-//	{
-//		if (scores[i] > highestScore)
-//		{
-//			highestScore = scores[i];
-//		}
-//		else if (scores[i] < lowestScore)
-//		{
-//			lowestScore = scores[i];
-//		}
-//	}
-//}
+void highestLowestScore(double scores[]);
+
+void highestLowestScore(double scores[])
+{
+	double highestScore = scores[0];
+	double lowestScore = scores[0];
+	for (int i = 0; i < JUDGES; i++)
+	{
+		if (scores[i] > highestScore)
+		{
+			highestScore = scores[i];
+		}
+		else if (scores[i] < lowestScore)
+		{
+			lowestScore = scores[i];
+		}
+	}
+	return;
+}
 //
 //
 //
@@ -154,7 +158,14 @@ double difficultyScore()
 int main(void)
 {
 	double a[5] = { 0 };
+	
 	judgesScores(a, 5);
-	difficultyScore();
+	double hardness = difficultyScore();
+	
+	highestLowestScore(a);
+
+	double scoreTotal = 1.0 * hardness;
+	cout << scoreTotal;
+
 	return 0;
 }
