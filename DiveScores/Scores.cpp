@@ -98,44 +98,60 @@ double scoreValidity(double score)
 	}
 	return score;
 }
-//
-//
-//
-//
-//
-void highestLowestScore(double scores[]);
 
-void highestLowestScore(double scores[])
+
+
+
+double highestScore(double scores[]);
+
+double highestScore(double scores[])
 {
 	double highestScore = scores[0];
-	double lowestScore = scores[0];
+	
 	for (int i = 0; i < JUDGES; i++)
 	{
 		if (scores[i] > highestScore)
 		{
 			highestScore = scores[i];
 		}
-		else if (scores[i] < lowestScore)
+	}
+	return highestScore;
+}
+
+
+
+double lowestScore(double scores[]);
+
+double lowestScore(double scores[])
+{
+	double lowestScore = scores[0];
+
+	for (int i = 0; i < JUDGES; i++)
+	{
+		if (scores[i] < lowestScore)
 		{
 			lowestScore = scores[i];
 		}
 	}
+	return lowestScore;
 }
-//
-//
-//
-//
-//
-//void removeScore(double score[], double scoreRemove)
-//{
-//	for (int i = 0; i < JUDGES; i++)
-//	{
-//		if (score[i] == scoreRemove)
-//		{
-//
-//		}
-//	}
-//}
+
+
+
+void removeScore(double score[], double scoreToRemove)
+{
+	for (int i = 0; i < JUDGES; i++)
+	{
+		if (score[i] == scoreToRemove)
+		{
+			for (int j = i; j < JUDGES - 1; j++)
+			{
+				score[j] = score[j + 1];
+			cout << "The score removed is: " << score[j];
+			}
+		}
+	}
+}
 //
 //
 //
@@ -160,11 +176,8 @@ int main(void)
 	
 	judgesScores(a, 5);
 	double hardness = difficultyScore();
-	
-	highestLowestScore(a);
 
-	double scoreTotal = 1.0 * hardness;
-	cout << scoreTotal;
+	
 
 	return 0;
 }
