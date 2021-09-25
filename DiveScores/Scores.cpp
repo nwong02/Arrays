@@ -64,12 +64,12 @@ double difficultyScore();
 double difficultyScore()
 {
 	double score = 0.0;
-	cout << "Enter the dive difficult score: ";
+	cout << "Enter the dive difficulty score: ";
 	cin >> score;
 
 	if ((score > 3.8) || (score < 1.2))
 	{
-		cout << "That difficult score is not valid, re-enter a valid score: ";
+		cout << "That difficulty score is not valid, re-enter a valid score: ";
 	}
 	return 1.0;
 
@@ -149,35 +149,40 @@ void removeScore(double score[], double scoreToRemove)
 				score[j] = score[j + 1];
 			cout << "The score removed is: " << score[j];
 			}
+			
 		}
 	}
 }
-//
-//
-//
-//
-//double scoreTotal(double score[]);
-//
-//double scoreTotal(double score[])
-//{
-//	double total = 0.0;
-//	for (int i = 0; i < JUDGES; i++)
-//	{
-//		total += score[i];
-//	}
-//	double difficultScore = difficultyScore(getNum());
-//	total *= difficultScore * 0.6;
-//	return total;
-//}
-//
+
+
+
+
+double scoreTotal(double score[]);
+
+double scoreTotal(double score[])
+{
+	double total = 0.0;
+	for (int i = 0; i < JUDGES; i++)
+	{
+		total += score[i];
+	}
+	double difficultScore = difficultyScore();
+	total *= difficultScore * 0.6;
+	return total;
+}
+
+
+
 int main(void)
 {
 	double a[5] = { 0 };
 	
 	judgesScores(a, 5);
 	double hardness = difficultyScore();
-
+	double total = scoreTotal(a);
 	
+	cout << "The diver's final score is: " << total << endl;
+
 
 	return 0;
 }
