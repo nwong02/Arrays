@@ -8,6 +8,7 @@
 * Description	: From Savitch 4th Ed. Chapter 5 self test exercises
 */
 
+int oneMore(int a[], int entries);
 
 int oneMore(int a[], int entries)
 {
@@ -21,7 +22,10 @@ int oneMore(int a[], int entries)
 
 
 
+double outOfOrder(double values[], int entries)
+{
 
+}
 
 
 
