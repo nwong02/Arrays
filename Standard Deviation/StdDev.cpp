@@ -12,7 +12,16 @@
 using namespace std;
 
 
-double calculateAverage(double values[], int positions);
+/*
+* Function		: calculateAverage()
+* Description	: This function takes an array parameter specified by the number of entries in the array and calculates the average of all the values in the array provided by the user
+* Parameters	:
+*		double values	: array of values provided by user
+*		int entries		: number of entries in the array
+* Returns		: the average calculated
+*/
+
+double calculateAverage(double values[], int entries);
 
 double calculateAverage(double values[], int entries)
 {
@@ -38,6 +47,17 @@ double calculateAverage(double values[], int entries)
 	return average;
 }
 
+
+
+
+/*
+* Function		: standardDeviation()
+* Description	: This function takes the numbers in the values array and calculates the standard deviation. Result from calculateAverage function is passed into the power and in turn passed into the radicand. 
+* Parameters	:
+*		double values	: array of values provided by user
+*		int entries		: number of entries in the array
+* Returns		: the calculated standard deviation
+*/
 
 double standardDeviation(double values[], int entries);
 
