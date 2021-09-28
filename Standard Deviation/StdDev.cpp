@@ -76,6 +76,7 @@ double standardDeviation(double values[], int entries)
 }
 
 
+
 int main()
 {
 	double a[5] = { 0 };
