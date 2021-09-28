@@ -13,152 +13,30 @@ using namespace std;
 
 #define MONTHS_IN_A_YEAR 12
 
-//int main()
-//{
-//	int month[MONTHS_IN_A_YEAR] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-//	double averageRainfall[MONTHS_IN_A_YEAR] = { 0 };
-//	double actualRainfall[MONTHS_IN_A_YEAR] = { 0 };
-//	cout << "What's the average rainfall for " << "month" << endl;
-//	for (int i = 0; i < MONTHS_IN_A_YEAR; i++)
-//	{
-//		monthOutput(i);
-//		cout << " : ";
-//		cin >> averageRainfall[i];
-//	}
-//
-//	return 0;
-//}
-//
-//
-//
-//
-//
-//void monthOutput(int month);
-//
-//void monthOutput(int month)
-//{
-//	switch (month)
-//	{
-//	case 0:
-//		cout << "January";
-//		break;
-//	case 1:
-//		cout << "February";
-//		break;
-//	case 2:
-//		cout << "March";
-//		break;
-//	case 3:
-//		cout << "April";
-//		break;
-//	case 4:
-//		cout << "May";
-//		break;
-//	case 5:
-//		cout << "June";
-//		break;
-//	case 6:
-//		cout << "July";
-//		break;
-//	case 7:
-//		cout << "August";
-//		break;
-//	case 8:
-//		cout << "September";
-//		break;
-//	case 9:
-//		cout << "October";
-//		break;
-//	case 10:
-//		cout << "November";
-//		break;
-//	case 11:
-//		cout << "December";
-//		break;
-//	}
-//}
-//
-//
-//
-//
-//double rainfallActual(double actualRainfall[], int month[MONTHS_IN_A_YEAR], int prevMonth);
-//
-//double rainfallActual(double actualRainfall[], int month[MONTHS_IN_A_YEAR], int prevMonth)
-//{
-//	for (int i = 0; i < MONTHS_IN_A_YEAR; i++)
-//	{
-//
-//	}
-//
-//	return 0;
-//}
-//
-//
-//
-//
-//
-//double averageMonthlyRainfall(double averageRainfall[], int month[MONTHS_IN_A_YEAR]);
-//
-//double averageMonthlyRainfall(double averageRainfall[], int month[MONTHS_IN_A_YEAR])
-//{
-//	for (int i = 0; i < MONTHS_IN_A_YEAR; i++)
-//	{
-//		cout << "Enter the average rainfall for the month of " << month[i] << " : ";
-//		cin >> averageRainfall[i];
-//	}
-//	return 1;
-//}
-
-
-void table(double actualRainfall[], double averageRainfall[], double statusRain[]);
-
-void table(double actualRainfall[], double averageRainfall[], double statusRain[])
+int main()
 {
-	cout << endl;
-	cout << "___________________________________________" << endl;
-	cout << "___________________________________________" << endl;
-
-	cout << "Month" << setw(20) << "Actual Rainfall" << setw(20) << "Average Rainfall" << setw(25) << "   Above or Below Average Rainfall   " << setw(20) << endl;
-
-	cout << "___________________________________________" << endl;
-
-
+	int month[MONTHS_IN_A_YEAR] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+	double averageRainfall[MONTHS_IN_A_YEAR] = { 0 };
+	double actualRainfall[MONTHS_IN_A_YEAR] = { 0 };
+	cout << "What's the average rainfall for " << "month" << endl;
 	for (int i = 0; i < MONTHS_IN_A_YEAR; i++)
 	{
-		cout.setf(ios_base::left);
-		displayMonth(i);
-		cout << ":" << "Average Rainfall" << " ";
-		int n1 = (int)averageRainfall[i];
-		barAsterisk(n1);
-		cout << ":" << "Actual Rainfall" << " ";
-		int n = (int)actualRainfall[i];
-		barAsterisk(n);
-		cout << endl;
-		cout << endl;
+		monthOutput(i);
+		cout << " : ";
+		cin >> averageRainfall[i];
 	}
 
-}
-
-
-
-void barAsterisk(int stars);
-
-void barAsterisk(int stars)
-{
-	for (int i = 1; i <= stars; i++)
-	{
-		cout << "*";
-	}
+	return 0;
 }
 
 
 
 
-void displayMonth(int month);
 
-void displayMonth(int month)
+void monthOutput(int month);
+
+void monthOutput(int month)
 {
-	cout.width(8);
 	switch (month)
 	{
 	case 0:
@@ -198,4 +76,35 @@ void displayMonth(int month)
 		cout << "December";
 		break;
 	}
+}
+
+
+
+
+double rainfallActual(double actualRainfall[], int month[MONTHS_IN_A_YEAR], int prevMonth);
+
+double rainfallActual(double actualRainfall[], int month[MONTHS_IN_A_YEAR], int prevMonth)
+{
+	for (int i = 0; i < MONTHS_IN_A_YEAR; i++)
+	{
+
+	}
+
+	return 0;
+}
+
+
+
+
+
+double averageMonthlyRainfall(double averageRainfall[], int month[MONTHS_IN_A_YEAR]);
+
+double averageMonthlyRainfall(double averageRainfall[], int month[MONTHS_IN_A_YEAR])
+{
+	for (int i = 0; i < MONTHS_IN_A_YEAR; i++)
+	{
+		cout << "Enter the average rainfall for the month of " << month[i] << " : ";
+		cin >> averageRainfall[i];
+	}
+	return 1;
 }

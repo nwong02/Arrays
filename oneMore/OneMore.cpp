@@ -24,7 +24,14 @@ int oneMore(int a[], int entries)
 
 double outOfOrder(double values[], int entries)
 {
-
+	for (int i = 0; i < entries; i++)
+	{
+		if (values[i] > values[i + 1])
+		{
+			return i + 1;
+		}
+		return 0;
+	}
 }
 
 
