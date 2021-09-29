@@ -12,15 +12,22 @@
 
 using namespace std;
 
-#define MAX_ENTRIES 50;
-
 
 int values(int entries[], int numberOfEntries)
 {
-	for (int i = 0; i < numberOfEntries; i++)
-	{
+	cout << "Enter the number of entries desired: ";
+	cin >> numberOfEntries;
 
+	if (numberOfEntries >= 50)
+	{
+		numberOfEntries == 50;
+		cout << "Sorry, I can only accept a maximum of 50 entries right now! =(" << endl;
 	}
+
+	do
+	{
+		
+	} while (numberOfEntries <= 50);
 }
 
 int main()
