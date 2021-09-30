@@ -13,25 +13,58 @@
 using namespace std;
 
 
-int values(int entries[], int numberOfEntries)
+int values(int entries[], int& numberOfEntries);
+
+int values(int entries[], int &numberOfEntries)
 {
 	cout << "Enter the number of entries desired: ";
 	cin >> numberOfEntries;
 
 	if (numberOfEntries >= 50)
 	{
-		numberOfEntries == 50;
+		numberOfEntries = 50;
 		cout << "Sorry, I can only accept a maximum of 50 entries right now! =(" << endl;
 	}
 
 	do
 	{
-		
+		for (int i = 0; i < numberOfEntries; i++)
+		{
+			cout << "Enter a value for the array";
+			cin >> entries[i];
+			cout << entries[i];
+		}
 	} while (numberOfEntries <= 50);
+	
+	
+	return 0;
 }
+
+
+
+
+void sorted(int entries[], int numberOfEntries)
+{
+
+	for (int i = 0; i < numberOfEntries; i++)
+	{
+		for (int j = i + 1; j < numberOfEntries; j++)
+		{
+			if (entries[i] < entries[j])
+			{
+				int tempHolder = entries[i];
+				entries[i] = entries[j];
+				entries[j] = tempHolder;
+			}
+		}
+	cout << entries[i] << endl;
+	}
+}
+
 
 int main()
 {
+	int a[] = { 0 };
+	sorted(a, 20);
 	return 1;
-
 }
