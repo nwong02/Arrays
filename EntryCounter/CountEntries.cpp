@@ -45,7 +45,6 @@ int values(int entries[], int &numberOfEntries)
 
 void sorted(int entries[], int numberOfEntries)
 {
-
 	for (int i = 0; i < numberOfEntries; i++)
 	{
 		for (int j = i + 1; j < numberOfEntries; j++)
@@ -57,14 +56,16 @@ void sorted(int entries[], int numberOfEntries)
 				entries[j] = tempHolder;
 			}
 		}
-	cout << entries[i] << endl;
+		cout << entries[i] << endl;
 	}
 }
 
 
+
+
 int main()
 {
-	int a[] = { 0 };
+	int a[20] = { 0 };
 	sorted(a, 20);
 	return 1;
 }
