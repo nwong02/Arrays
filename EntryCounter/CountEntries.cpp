@@ -91,6 +91,7 @@ int counter(int entries[], int numberOfEntries)
 		}
 		cout << "The number " << entries[i] << " occurs " << counter << " times" << endl;
 	}
+
 	return 0;
 }
 
