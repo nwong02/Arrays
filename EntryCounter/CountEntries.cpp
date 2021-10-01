@@ -13,9 +13,9 @@
 using namespace std;
 
 
-int values(int entries[], int& numberOfEntries);
+int values(int entries[], int numberOfEntries);
 
-int values(int entries[], int &numberOfEntries)
+int values(int entries[], int numberOfEntries)
 {
 	cout << "Enter the number of entries desired: ";
 	cin >> numberOfEntries;
@@ -43,6 +43,9 @@ int values(int entries[], int &numberOfEntries)
 
 
 
+
+void sorted(int entries[], int numberOfEntries);
+
 void sorted(int entries[], int numberOfEntries)
 {
 	for (int i = 0; i < numberOfEntries; i++)
@@ -66,10 +69,30 @@ void sorted(int entries[], int numberOfEntries)
 
 
 
+int counter(int entries[], int numberOfEntries)
+{
+	for (int i = 0; i < numberOfEntries; i++)
+	{
+		int counter = 1;
+		for (int j = i + 1; j < numberOfEntries; j++)
+		{
+			if (entries[i] == entries[j])
+			{
+				counter += 1;
+			}
+		}
+		cout << "The number " << entries[i] << " occurs " << counter << " times" << endl;
+	}
+	return 0;
+}
+
+
+
 
 int main()
 {
 	int a[20] = { 5, 23, 1, 56, 20, 12, 9, 8 };
-	sorted(a, 20);
+	//sorted(a, 20);
+	counter(a, 20);
 	return 1;
 }
