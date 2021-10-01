@@ -71,17 +71,20 @@ void sorted(int entries[], int numberOfEntries)
 
 int counter(int entries[], int numberOfEntries)
 {
+	int counter = 0;
 	int entryCount[] = { 0 };
 	for (int i = 0; i < numberOfEntries; i++)
 	{
-		int counter = 1;
-		entryCount[i] = 0;
+		if (entryCount[i] == 0)
+		{
+			counter = 0;
+		}
 		for (int j = i + 1; j < numberOfEntries; j++)
 		{
 			if (entries[i] == entries[j])
 			{
 				counter += 1;
-				entryCount[j] = 2;
+				entryCount[j] = 1;
 			}
 		}
 		cout << "The number " << entries[i] << " occurs " << counter << " times" << endl;
