@@ -71,46 +71,27 @@ void sorted(int entries[], int numberOfEntries)
 
 int counter(int entries[], int numberOfEntries)
 {
-	int counter[] = { 0 };
-	int repeatCounter = 1;
-	for (int i = 0; i < numberOfEntries; i++)
+	int count = 1;
+	int holder[] = { 0 };
+	for (int i = 1; i < numberOfEntries; i++)
 	{
-		for (int j = i + 1; j < numberOfEntries; j++)
+		for (int j = 0; j < i; j++)
 		{
 			if (entries[i] == entries[j])
 			{
-				for (int k = j; k < numberOfEntries; k++)
-				{
-					if (entries[k] == entries[k + 1])
-					{
-						repeatCounter++;
-					}
-					entries[k] = entries[k + 1];
-				}
-				numberOfEntries--;
+				break;
+			}
+
+			if (i == j)
+			{
+				count++;
 			}
 		}
-		counter[i] = repeatCounter;
+		cout << "The count of " << i << " is " << count << endl;
 	}
-
-	/*int counter = 0;
-	int entryCount[] = { 0 };
-
-	for (int i = 0; i < numberOfEntries; i++)
-	{
-		for (int j = i + 1; j < numberOfEntries; j++)
-		{
-			if (entries[i] == entries[j])
-			{
-				counter += 1;
-				entryCount[j] = 1;
-			}
-		}
-		cout << "The number " << entries[i] << " occurs " << counter << " times" << endl;
-	}*/
-
-	return 0;
+	return count;
 }
+
 
 
 
@@ -118,7 +99,7 @@ int counter(int entries[], int numberOfEntries)
 int main()
 {
 	int a[20] = { 5, 23, 1, 56, 20, 12, 9, 8, 8 };
-	//sorted(a, 20);
+	sorted(a, 20);
 	counter(a, 20);
 	return 1;
 }
