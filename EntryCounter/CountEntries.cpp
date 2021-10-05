@@ -93,24 +93,26 @@ void sorted(int entries[], int numberOfEntries)
 //}
 
 int counter(int entries[], int numberOfEntries) {
+	
 	int values = numberOfEntries;
-	int A[values];
+	
+	entries[] = { 0 };
 	for (int i = 0; i < numberOfEntries; i++)
-		cin >> A[i];
+		cin >> entries[i];
 
-	int seen[values];
+	int seen[] = { 0 };
 	for (int i = 0; i < numberOfEntries; i++)
 		seen[i] = 0;
 
 	for (int i = 0; i < numberOfEntries; i++) {
 		if (seen[i] == 0) {
 			int count = 0;
-			for (int j = i; j < N; j++)
-				if (A[j] == A[i]) {
+			for (int j = i; j < numberOfEntries; j++)
+				if (entries[j] == entries[i]) {
 					count += 1;
 					seen[j] = 1;
 				}
-			cout << A[i] << " occurs " << count << " times" << endl;
+			cout << entries[i] << " occurs " << count << " times" << endl;
 		}
 	}
 
@@ -125,6 +127,6 @@ int main()
 {
 	int a[20] = { 5, 23, 1, 56, 20, 12, 9, 8, 8 };
 	sorted(a, 20);
-	counter();
+	counter(a, 20);
 	return 1;
 }
