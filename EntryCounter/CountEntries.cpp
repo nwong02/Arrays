@@ -69,27 +69,52 @@ void sorted(int entries[], int numberOfEntries)
 
 
 
-int counter(int entries[], int numberOfEntries)
-{
-	int count = 1;
-	int holder[] = { 0 };
-	for (int i = 1; i < numberOfEntries; i++)
-	{
-		for (int j = 0; j < i; j++)
-		{
-			if (entries[i] == entries[j])
-			{
-				break;
-			}
+//int counter(int entries[], int numberOfEntries)
+//{
+//	int count = 1;
+//	int holder[] = { 0 };
+//	for (int i = 1; i < numberOfEntries; i++)
+//	{
+//		for (int j = 0; j < i; j++)
+//		{
+//			if (entries[i] == entries[j])
+//			{
+//				break;
+//			}
+//
+//			if (i == j)
+//			{
+//				count++;
+//			}
+//		}
+//		cout << "The count of " << i << " is " << count << endl;
+//	}
+//	return count;
+//}
 
-			if (i == j)
-			{
-				count++;
-			}
+int counter(int entries[], int numberOfEntries) {
+	int values = numberOfEntries;
+	int A[values];
+	for (int i = 0; i < numberOfEntries; i++)
+		cin >> A[i];
+
+	int seen[values];
+	for (int i = 0; i < numberOfEntries; i++)
+		seen[i] = 0;
+
+	for (int i = 0; i < numberOfEntries; i++) {
+		if (seen[i] == 0) {
+			int count = 0;
+			for (int j = i; j < N; j++)
+				if (A[j] == A[i]) {
+					count += 1;
+					seen[j] = 1;
+				}
+			cout << A[i] << " occurs " << count << " times" << endl;
 		}
-		cout << "The count of " << i << " is " << count << endl;
 	}
-	return count;
+
+	return 0;
 }
 
 
@@ -100,6 +125,6 @@ int main()
 {
 	int a[20] = { 5, 23, 1, 56, 20, 12, 9, 8, 8 };
 	sorted(a, 20);
-	counter(a, 20);
+	counter();
 	return 1;
 }
