@@ -93,11 +93,11 @@ void sorted(int entries[], int numberOfEntries)
 //	return count;
 //}
 
-int counter(int entries[], int numberOfEntries) 
+int counter(int entries[], int &numberOfEntries) 
 {	
-	int count = 0;
+	int count = 1;
 	const int total = numberOfEntries;
-	int tracker[total] = { 0 };
+	int tracker[] = { 0 };
 
 	for (int i = 0; i < total; i++)
 	{
@@ -128,6 +128,7 @@ int main()
 {
 	int a[20] = { 5, 23, 1, 56, 20, 12, 9, 8, 8 };
 	sorted(a, 20);
-	counter(a, 20);
+
+	
 	return 1;
 }
