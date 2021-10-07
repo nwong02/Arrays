@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <vector>
 
 
 using namespace std;
@@ -92,25 +93,25 @@ void sorted(int entries[], int numberOfEntries)
 //	return count;
 //}
 
-int counter(int entries[], int numberOfEntries) {
-	
-	int values = numberOfEntries;
-	
-	entries[] = { 0 };
-	for (int i = 0; i < numberOfEntries; i++)
-		cin >> entries[i];
+int counter(int entries[], int numberOfEntries) 
+{	
+	int count = 0;
+	const int total = numberOfEntries;
+	int tracker[total] = { 0 };
 
-	int seen[] = { 0 };
-	for (int i = 0; i < numberOfEntries; i++)
-		seen[i] = 0;
+	for (int i = 0; i < total; i++)
+	{
+		tracker[i] = 0;
+	}
 
-	for (int i = 0; i < numberOfEntries; i++) {
-		if (seen[i] == 0) {
-			int count = 0;
-			for (int j = i; j < numberOfEntries; j++)
-				if (entries[j] == entries[i]) {
+	for (int i = 0; i < total; i++) {
+		if (tracker[i] == 0) 
+		{
+			for (int j = i; j < total; j++)
+				if (entries[j] == entries[i]) 
+				{
 					count += 1;
-					seen[j] = 1;
+					tracker[j] = 1;
 				}
 			cout << entries[i] << " occurs " << count << " times" << endl;
 		}
