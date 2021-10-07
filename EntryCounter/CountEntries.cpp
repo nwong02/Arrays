@@ -96,26 +96,9 @@ void sorted(int entries[], int numberOfEntries)
 int counter(int entries[], int &numberOfEntries) 
 {	
 	int count = 1;
-	const int total = numberOfEntries;
 	int tracker[] = { 0 };
 
-	for (int i = 0; i < total; i++)
-	{
-		tracker[i] = 0;
-	}
-
-	for (int i = 0; i < total; i++) {
-		if (tracker[i] == 0) 
-		{
-			for (int j = i; j < total; j++)
-				if (entries[j] == entries[i]) 
-				{
-					count += 1;
-					tracker[j] = 1;
-				}
-			cout << entries[i] << " occurs " << count << " times" << endl;
-		}
-	}
+	for (int i:tracker)
 
 	return 0;
 }
@@ -129,6 +112,29 @@ int main()
 	int a[20] = { 5, 23, 1, 56, 20, 12, 9, 8, 8 };
 	sorted(a, 20);
 
+	int tracker[20] = { 0 };
+	for (int i = 0; i < 20; i++)
+	{
+		tracker[i] = 0;
+	}
+	
+	for (int i = 0; i < 20; i++)
+	{
+		if (tracker[i] == 0)
+		{
+			int counter = 0;
+			for (int j = i; j < 20; j++)
+			{
+				if (a[j] == a[i])
+				{
+					counter += 1;
+					tracker[j] = 1;
+				cout << a[i] << " occurs " << counter << " times." << endl;
+				}
+			}
+		}
+	}
+	
 	
 	return 1;
 }
