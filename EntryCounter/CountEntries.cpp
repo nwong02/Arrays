@@ -14,6 +14,14 @@
 using namespace std;
 
 
+
+/*
+* Function		: values()
+* Parameters	: int entries[], int numberOfEntries
+* Description	: Takes in user-provided values up to a maxmimum of 20 entries in the array
+* Returns		: 0
+*/
+
 int values(int entries[], int numberOfEntries);
 
 int values(int entries[], int numberOfEntries)
@@ -43,6 +51,12 @@ int values(int entries[], int numberOfEntries)
 
 
 
+/*
+* Function		: sorted()
+* Parameters	: int entries[], int numberOfEntries
+* Description	: Function takes in an array of values and sorts in descending order
+* Returns		: void
+*/
 
 
 void sorted(int entries[], int numberOfEntries);
@@ -113,6 +127,7 @@ int main()
 	sorted(a, 20);
 
 	int tracker[20] = { 0 };
+
 	for (int i = 0; i < 20; i++)
 	{
 		tracker[i] = 0;
