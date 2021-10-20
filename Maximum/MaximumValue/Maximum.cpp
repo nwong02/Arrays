@@ -11,6 +11,9 @@
 using namespace std;
 
 
+
+double findMax(double entries[], int numberOfElements);
+
 double findMax(double entries[], int numberOfElements)
 {
 	double maxValue = entries[0];
@@ -26,6 +29,9 @@ double findMax(double entries[], int numberOfElements)
 	printf("Maximum value is: %f\n", maxValue);
 	return maxValue;
 }
+
+
+
 
 
 int main(void)
