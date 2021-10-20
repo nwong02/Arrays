@@ -14,6 +14,7 @@ using namespace std;
 double findMax(double entries[], int numberOfElements)
 {
 	double maxValue = entries[0];
+	double minValue = entries[0];
 	for (int i = 0; i < numberOfElements; i++)
 	{
 		
