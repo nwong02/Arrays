@@ -24,7 +24,7 @@ int sumAll(int values[], int elements)
 
 void normaliseArray(int entries[], double normalised[], int numOfEntries)
 {
-	sumAll(entries[], numOfEntries);
+	sumAll(entries, numOfEntries);
 	for (int i = 0; i < numOfEntries; i++)
 	{
 		
